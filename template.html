@@ -2,42 +2,67 @@
 <html>
 <head>
     <style>
-        .inline {
-            display: inline-block;
-            background-color: black;
-            height: 100px;
-            width: 100px;
-            margin: 50px 0 50px 50px;
-        }
+    h1 {
+        font-family: Helvetica, sans-serif;
+        margin-left: 10px;
+    }
 
-        #red{
-            background-color: red;
-            width: 350px;
-            height: 200px;
-        }
+    div.background {
+        background-color: #555555;
+        height: 130px;
+        width: 600px;
+        margin: 10px;
+    }
 
-        #blue{
-            background-color: blue;
-            width: 350px;
-            height: 200px;
-        }
+    div.normal {
+        width: 192px;
+        height: 118px;
+    }
 
-        div{
-            display: inline-block;
-        }
+    div.long {
+        height: 100px;
+        vertical-align: top;
+    }
 
-        body{
-            margin: 0;
-        }
+    div.short {
+        height: 75px;
+    }
+
+    div.mini {
+        width: 291px;
+        height: 35px;
+        vertical-align: baseline;
+    }
+
+    div.maxi {
+        width: 291px;
+        height: 118px;
+    }
+
+    div.inner{
+        display: inline-block;
+        margin: 6px 0 6px 6px;
+        background-color: #cccccc;
+    }
+
+    div.mix div{
+        width: 142.5px;
+    }
     </style>
 </head>
 <body>
-    <div id="red">
-        <div class="inline"></div>
-        <div class="inline"></div>
-    </div><div id="blue">
-        <div class="inline"></div>
-        <div class="inline"></div>
+    <h1>AAAAAHHHHHH</h1>
+
+    <div class="background">
+        <div class="normal inner"></div><div class="normal inner"></div><div class="normal inner"></div>
     </div>
+
+    <div class="background mix">
+        <div class="long inner"></div><div class="short inner"></div><div class="long inner"></div><div class="short inner"></div>
+    </div>
+
+    <div class="background">
+        <div class="mini inner"></div><div class="maxi inner"></div>
+    </div>   
 </body>
 </html>
